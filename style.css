@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    color: #333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: #666;
+}
+
+a, .btn {
+    transition: all 300ms ease;
+}
+
+nav, .nav-links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 15vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0 10vw;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #007bff;
+}
+
+#hamburger-nav {
+    display: none;
+}
+
+.section-container {
+    display: flex;
+}
+
+section {
+    padding: 4vh 10vw;
+    min-height: 90vh;
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    text-align: center;
+    color: #444;
+}
+
+.section__pic-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.section__text p {
+    font-weight: 600;
+}
+
+.section__text__p1 {
+    font-size: 1.75rem;
+    margin-bottom: -1rem;
+}
+
+.title {
+    font-size: 4rem;
+    color: #007bff;
+}
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+.portfolio-section {
+    padding: 4vh 10vw;
+    text-align: center;
+}
+
+.portfolio-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: left;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #007bff;
+}
+
+.portfolio-card h3 {
+    margin: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.portfolio-card p {
+    margin: 0 1rem 1rem;
+    color: #666;
+}
+
+.card-button {
+    display: block;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #0056b3;
+}
