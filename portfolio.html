@@ -22,20 +22,115 @@
         <div class="portfolio-container">
             <!-- Card 1 -->
             <div class="portfolio-card">
-                <img src="./img/Screenshot 2024-11-08 123731.png" alt="Project 1">
                 <h3>Fundamentals of Design</h3>
-                <p>In this project,  I employed Adobe Illustrator to create detailed concept sketches for the website's layout. This involved carefully planning the structure, balance, and hierarchy of elements on each page to enhance usability and visual appeal. Using Illustrator, I could precisely design vector-based sketches that allowed me to explore and refine core design principles, such as alignment, contrast, and spacing. </p>
-                <!-- <a href="project1-link.html" class="card-button">View Project</a> -->
+                <div class="project-image-gallery">
+                    <div class="image-container">
+                        <a href="./img/Screenshot 2024-11-08 123731.png" class="image-link">
+                            <img src="./img/Screenshot 2024-11-08 123731.png" alt="Project Image 1">
+                        </a>
+                    </div>
+                </div>
+                <p>In this project, I embarked on my first journey into web design using Adobe Illustrator to create concept sketches 
+                   for the website's layout. As a beginner, I initially struggled with understanding design principles and found the 
+                   process challenging. Through persistent practice and learning, I gradually developed skills in planning the 
+                   structure, balance, and hierarchy of elements. This project was a crucial learning experience that helped me improve 
+                   my design capabilities, teaching me how to enhance usability and visual appeal step by step. I learned that design 
+                   is an iterative process, and my first attempts were far from perfect, but each iteration brought me closer to 
+                   creating a more intuitive and aesthetically pleasing layout.</p>
             </div>
 
             <!-- Card 2 -->
             <div class="portfolio-card">
-                <img src="./img/Screenshot 2024-11-08 123546.png" alt="Project 2">
-                <h3>Immersive Technology</h3>
-                <p>In this project,  I used Unity to design and build a VR Escape Room game. This project required creating an engaging and realistic virtual environment that fully immerses players in a series of interactive, puzzle-based challenges. Leveraging Unity’s VR tools, I developed dynamic 3D models, realistic textures, and interactive objects that respond to player input, enhancing the sense of presence within the virtual space. By implementing spatial audio, intuitive controls, and realistic physics, I crafted an immersive experience that encourages players to solve puzzles while navigating through a richly detailed environment.</p>
-                <!-- <a href="project2-link.html" class="card-button">View Project</a> -->
+                <h3>UI/UX Design For Apps</h3>
+                <div class="project-image-gallery">
+                    <div class="image-container">
+                        <a href="./img/Screenshot 2025-01-21 024902.png" class="image-link">
+                            <img src="./img/Screenshot 2025-01-21 024902.png" alt="Project Image 1">
+                        </a>
+                        <a href="./img/Screenshot 2025-01-21 025033.png" class="image-link">
+                            <img src="./img/Screenshot 2025-01-21 025033.png" alt="Project Image 2">
+                        </a>
+                        <a href="./img/Screenshot 2025-01-21 043808.png" class="image-link">
+                            <img src="./img/Screenshot 2025-01-21 043808.png" alt="Project Image 3">
+                        </a>
+                        <a href="./img/Screenshot 2025-01-21 043822.png" class="image-link">
+                            <img src="./img/Screenshot 2025-01-21 043822.png" alt="Project Image 4">
+                        </a>
+                        <a href="./img/Screenshot 2025-01-21 050423.png" class="image-link">
+                            <img src="./img/Screenshot 2025-01-21 050423.png" alt="Project Image 5">
+                        </a>
+                        <a href="./img/Screenshot 2025-01-21 050537.png" class="image-link">
+                            <img src="./img/Screenshot 2025-01-21 050537.png" alt="Project Image 6">
+                        </a>
+                    </div>
+                </div>
+                <p>In this module, I delved into the world of UI/UX Design for apps, which proved to be a fascinating and engaging 
+                   experience. Using Figma as my primary tool, I learned to create interactive prototypes and design user-friendly 
+                   interfaces. The process of crafting intuitive user experiences captivated me, sparking a genuine interest in this field.
+                    Motivated by this newfound passion, I dedicated myself to regular practice, consistently using Figma to refine my 
+                    skills. Through this hands-on approach, I noticed a significant improvement in my design perspective. I began to 
+                    understand the nuances of user-centered design, the importance of visual hierarchy, and how to create interfaces that 
+                    are both aesthetically pleasing and functional. This project not only enhanced my technical skills but also sharpened 
+                    my ability to think from a user's point of view, making me more adept at creating designs that truly resonate with 
+                    end-users.</p>
+            </div>
+
+            <!-- Card 3 with Videos -->
+            <div class="portfolio-card">
+                <h3>Project Video Showcase</h3>
+                <div class="video-gallery">
+                    <video controls>
+                        <source src="./recording/Screen Recording 2025-01-21 020305.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls>
+                        <source src="./recording/Screen Recording 2025-01-21 022116.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video controls>
+                        <source src="./recording/Screen Recording 2025-01-21 022649.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p>These videos showcase a selection of my recent ongoing projects, highlighting the diverse range of technical 
+                    skills and innovative solutions I've developed. Each recording demonstrates the key features and functional 
+                    capabilities of my work.</p>
             </div>
         </div>
     </section>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.image-link');
+        const body = document.body;
+
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const overlay = document.createElement('div');
+                overlay.className = 'image-overlay';
+                const img = document.createElement('img');
+                img.src = this.href;
+                const closeButton = document.createElement('span');
+                closeButton.innerHTML = '&times;';
+                closeButton.className = 'close-button';
+                overlay.appendChild(img);
+                overlay.appendChild(closeButton);
+                body.appendChild(overlay);
+                overlay.style.display = 'block';
+
+                closeButton.onclick = function() {
+                    body.removeChild(overlay);
+                }
+
+                overlay.onclick = function(e) {
+                    if (e.target === overlay) {
+                        body.removeChild(overlay);
+                    }
+                }
+            });
+        });
+    });
+    </script>
 </body>
 </html>
